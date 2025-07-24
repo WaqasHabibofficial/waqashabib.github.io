@@ -178,3 +178,80 @@ footer {
   width: 60px;
   height: 60px;
 }
+
+/* About & Legal Sections */
+.about-section,
+.legal-section {
+  padding: 4rem 2rem;
+  background: #111;
+  color: #fff;
+}
+.about-section h2,
+.legal-section h2 {
+  color: gold;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  text-align: center;
+}
+.about-section p,
+.legal-section p {
+  font-size: 1.1rem;
+  text-align: center;
+  max-width: 800px;
+  margin: 1rem auto;
+}
+.section-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: auto;
+}
+.section-content.reverse {
+  flex-direction: row-reverse;
+}
+.section-content .text {
+  flex: 1 1 400px;
+}
+.section-content .image {
+  flex: 1 1 400px;
+  text-align: center;
+}
+.section-content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .section-content,
+  .section-content.reverse {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .section-content img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar .nav-links {
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  .navbar .nav-links a {
+    display: block;
+    margin: 0.5rem 0;
+  }
+}
