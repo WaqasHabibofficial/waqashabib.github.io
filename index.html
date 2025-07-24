@@ -14,11 +14,11 @@
   <header class="navbar">
     <div class="logo">Waqas Habib</div>
     <nav class="nav-links">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="services.html">Services</a>
-      <a href="legal.html">Legal</a>
-      <a href="contact.html">Contact</a>
+      <a href="#">Home</a>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#contact">Contact</a>
     </nav>
   </header>
 
@@ -27,14 +27,41 @@
     <div class="hero-content">
       <h1>Waqas Habib Builders & Legal</h1>
       <p>Crafting Excellence in Construction & Legal Services</p>
-      <a href="contact.html" class="btn">Get a Free Quote</a>
+      <a href="#contact" class="btn">Get a Free Quote</a>
     </div>
   </section>
 
-  <!-- Images Gallery Horizontal -->
-  <section class="gallery-scroll">
-    <h2>Our Masterpieces</h2>
-    <div class="scroll-container">
+  <!-- Banner Under CTA -->
+  <section class="brand-banner">
+    <div class="banner-text">
+      <h2>Your Vision, Our Legacy</h2>
+      <a href="#contact" class="btn-banner">Start Your Project</a>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section class="services" id="services">
+    <h2>Our Core Services</h2>
+    <div class="services-grid">
+      <div class="service-item">
+        <h3>Residential Construction</h3>
+        <p>Building elegant, lasting homes across Pakistan.</p>
+      </div>
+      <div class="service-item">
+        <h3>Commercial Projects</h3>
+        <p>From malls to offices, built with excellence.</p>
+      </div>
+      <div class="service-item">
+        <h3>Legal Advisory</h3>
+        <p>Trusted legal solutions for property and contracts.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Image Gallery Section -->
+  <section class="scroll-gallery" id="gallery">
+    <h2>Our Projects</h2>
+    <div class="horizontal-scroll">
       <img src="images/project1.jpg" alt="Luxury Home" />
       <img src="images/project2.jpg" alt="Modern Office" />
       <img src="images/project3.jpg" alt="Construction Site" />
@@ -42,28 +69,39 @@
     </div>
   </section>
 
-  <!-- Short Videos Section Horizontal -->
-  <section class="video-scroll">
-    <h2>Project Glimpses</h2>
-    <div class="scroll-container">
-      <video src="videos/video1.mp4" controls></video>
-      <video src="videos/video2.mp4" controls></video>
-      <video src="videos/video3.mp4" controls></video>
+  <!-- Video Gallery Section -->
+  <section class="scroll-gallery">
+    <h2>Watch Our Work</h2>
+    <div class="horizontal-scroll">
+      <video controls muted>
+        <source src="video/clip1.mp4" type="video/mp4" />
+      </video>
+      <video controls muted>
+        <source src="video/clip2.mp4" type="video/mp4" />
+      </video>
+      <video controls muted>
+        <source src="video/clip3.mp4" type="video/mp4" />
+      </video>
     </div>
   </section>
 
-  <!-- Smooth CTA Banner -->
-  <section class="cta-banner">
-    <div class="cta-banner-content">
-      <h2>Let's Build Your Dream Project</h2>
-      <a href="contact.html" class="btn-animated">Get Started</a>
-    </div>
+  <!-- About Section -->
+  <section class="about" id="about">
+    <h2>About Us</h2>
+    <p>With a rich legacy of delivering quality and integrity, Waqas Habib Builders and Legal has become a symbol of trust in the construction and legal sectors in Pakistan.</p>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact" id="contact">
+    <h2>Contact Us</h2>
+    <p>Ready to start your project? Let’s discuss how we can help.</p>
+    <a href="mailto:info@waqashabib.com" class="btn-dark">Email Us</a>
   </section>
 
   <!-- Footer -->
-  <footer class="footer">
+  <footer>
     <div class="footer-content">
-      <p>&copy; 2025 <strong>Waqas Habib Builders & Legal</strong> — Crafting Legacies.</p>
+      <p>&copy; 2025 Waqas Habib Builders and Legal. All Rights Reserved.</p>
       <div class="socials">
         <a href="#"><img src="images/facebook.png" alt="Facebook" /></a>
         <a href="#"><img src="images/instagram.png" alt="Instagram" /></a>
