@@ -1,3 +1,4 @@
+/* Base Reset */
 * {
   margin: 0;
   padding: 0;
@@ -6,260 +7,206 @@
 
 body {
   font-family: 'Segoe UI', sans-serif;
-  background: #fff;
-  color: #111;
+  background-color: #f9f9f9;
+  color: #222;
   line-height: 1.6;
 }
 
+/* Navbar */
 .navbar {
-  background: #000;
-  color: #fff;
-  padding: 1rem 2rem;
   display: flex;
   justify-content: space-between;
+  padding: 1rem 2rem;
+  background-color: #111;
+  color: #fff;
   align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
-.logo {
+.navbar .logo {
+  font-size: 1.8rem;
   font-weight: bold;
-  font-size: 1.5rem;
-  font-family: 'Georgia', serif;
+  letter-spacing: 1px;
+  text-transform: uppercase;
 }
 
 .nav-links a {
-  color: #fff;
+  color: #eee;
   margin-left: 20px;
   text-decoration: none;
   font-weight: 500;
-  transition: color 0.3s ease;
+  transition: color 0.3s;
 }
 
 .nav-links a:hover {
-  color: #f5c518;
+  color: #ffcb05;
 }
 
+/* Hero */
 .hero {
   background: url('images/hero.jpg') center/cover no-repeat;
-  color: #fff;
   height: 90vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  text-align: center;
-}
-
-.hero-content {
-  background: rgba(0, 0, 0, 0.6);
-  padding: 2rem;
-  border-radius: 10px;
-}
-
-.hero h1 {
-  font-size: 3rem;
-  margin-bottom: 1rem;
-}
-
-.hero p {
-  font-size: 1.2rem;
-  margin-bottom: 1.5rem;
-}
-
-.btn, .btn-dark {
-  background: #f5c518;
-  color: #000;
-  padding: 12px 28px;
-  border: none;
-  border-radius: 30px;
-  font-size: 1rem;
-  font-weight: 600;
-  text-decoration: none;
-  transition: all 0.3s ease;
-}
-
-.btn-dark {
-  background: #111;
   color: #fff;
-}
-
-.btn:hover, .btn-dark:hover {
-  transform: scale(1.05);
-}
-
-.services {
-  padding: 4rem 2rem;
   text-align: center;
 }
 
-.services h2 {
-  font-size: 2.2rem;
-  margin-bottom: 2rem;
+.hero-content h1 {
+  font-size: 3rem;
+  text-shadow: 2px 2px 10px #000;
 }
 
-.services-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  justify-content: center;
+.hero-content p {
+  font-size: 1.2rem;
+  margin: 1rem 0;
 }
 
-.service-item {
-  flex: 1 1 280px;
-  background: #f9f9f9;
+.btn {
+  background: #ffcb05;
+  color: #000;
+  padding: 0.8rem 1.5rem;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background: #e0b404;
+}
+
+/* Gallery Scroll */
+.gallery-scroll, .video-scroll {
   padding: 2rem;
-  border-radius: 12px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
-.scroll-section {
-  padding: 3rem 2rem;
+.gallery-scroll h2, .video-scroll h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  color: #333;
 }
 
 .scroll-container {
   display: flex;
   overflow-x: auto;
   gap: 1rem;
-  padding: 1rem 0;
+  padding-bottom: 1rem;
   scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
 }
 
-.scroll-container img,
-.scroll-container video {
+.scroll-container img, .scroll-container video {
   height: 200px;
-  border-radius: 10px;
   flex: 0 0 auto;
-  scroll-snap-align: center;
-}
-
-.video-banner {
-  position: relative;
-  height: 400px;
-  overflow: hidden;
-}
-
-.video-banner video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.video-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0,0,0,0.4);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.video-overlay h2 {
-  color: #fff;
-  font-size: 2.5rem;
-  font-weight: 600;
-}
-
-.cta {
-  background: #f5f5f5;
-  text-align: center;
-  padding: 3rem 2rem;
-}
-
-.cta h2 {
-  font-size: 2rem;
-  margin-bottom: 1.5rem;
-}
-
-.promo-banner {
-  background: url('images/banner2.jpg') center/cover no-repeat;
-  height: 320px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.promo-content {
-  background: rgba(0,0,0,0.6);
-  padding: 2rem 3rem;
   border-radius: 10px;
+  scroll-snap-align: start;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* CTA Banner */
+.cta-banner {
+  background: url('images/banner.jpg') center/cover no-repeat;
+  padding: 4rem 2rem;
   text-align: center;
-  animation: fadeInUp 1s ease;
-}
-
-.promo-content h2 {
+  position: relative;
   color: #fff;
-  font-size: 2rem;
-  margin-bottom: 1rem;
 }
 
-.promo-btn {
-  display: inline-block;
+.cta-banner-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  text-shadow: 1px 1px 8px #000;
+}
+
+.btn-animated {
   background: #fff;
-  color: #000;
-  padding: 12px 28px;
-  border-radius: 25px;
-  font-weight: 600;
+  color: #111;
+  padding: 0.8rem 1.8rem;
+  font-weight: bold;
+  border-radius: 5px;
+  animation: fadeInUp 1.5s ease-in-out;
+  transition: transform 0.3s;
+  display: inline-block;
   text-decoration: none;
-  transition: all 0.3s ease;
 }
 
-.promo-btn:hover {
-  background: #000;
-  color: #fff;
-  transform: scale(1.05);
+.btn-animated:hover {
+  transform: translateY(-3px);
+  background-color: #ffcb05;
+  color: #000;
 }
 
 @keyframes fadeInUp {
-  0% {
-    opacity: 0;
-    transform: translateY(40px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  0% { opacity: 0; transform: translateY(20px);}
+  100% { opacity: 1; transform: translateY(0);}
 }
 
-footer {
-  background: #111;
-  color: #fff;
-  padding: 2rem;
+/* Footer */
+.footer {
+  background-color: #111;
+  color: #ccc;
+  padding: 2rem 1rem;
   text-align: center;
 }
 
-footer .socials img {
-  width: 30px;
-  margin: 0 8px;
+.footer p {
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
 }
 
+.footer .socials a img {
+  width: 25px;
+  margin: 0 8px;
+  opacity: 0.8;
+  transition: transform 0.3s;
+}
+
+.footer .socials a:hover img {
+  transform: scale(1.1);
+  opacity: 1;
+}
+
+/* WhatsApp Float */
 .whatsapp-float {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  z-index: 100;
+  z-index: 99;
 }
 
 .whatsapp-float img {
-  width: 50px;
+  width: 55px;
+  height: 55px;
 }
 
 /* Responsive */
 @media (max-width: 768px) {
-  .hero h1 {
-    font-size: 2rem;
-  }
-  .hero p {
-    font-size: 1rem;
-  }
-  .services-grid {
+  .navbar {
     flex-direction: column;
+    align-items: flex-start;
   }
-  .scroll-container img,
-  .scroll-container video {
-    height: 160px;
+
+  .nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
   }
-  .promo-content h2 {
-    font-size: 1.5rem;
+
+  .hero-content h1 {
+    font-size: 2.2rem;
+  }
+
+  .cta-banner-content h2 {
+    font-size: 1.8rem;
+  }
+
+  .scroll-container img, .scroll-container video {
+    height: 150px;
   }
 }
